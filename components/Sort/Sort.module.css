@@ -1,0 +1,30 @@
+
+.sort span {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.sort span:hover {
+    color: var(--primary);
+}
+
+.sort span svg{
+    display: none;
+}
+
+.sort .active svg{
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.sort{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+    justify-items: right;
+    align-items: center;
+}
+
+.active{
+    font-weight: bold;
+    color: var(--primary);
+}

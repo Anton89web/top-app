@@ -9,6 +9,7 @@
 	text-align: center;
 }
 
+
 .salary {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -53,9 +54,6 @@
 	justify-content: center;
 }
 
-.rate svg circle {
-	fill: var(--red);
-}
 
 @media screen and (max-width: 1200px) {
 	.hh{

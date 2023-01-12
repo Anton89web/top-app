@@ -3,7 +3,8 @@ import cn from "classnames";
 import styles from "./HhData.module.css";
 import {HhDataProps} from "./HhData.props";
 import Card from "../Card/Card";
-import {rate} from "../../public/Icons";
+import {rate, rateNoActive} from "../../public/Icons";
+import {priceRU} from "../../helpers/helpers";
 
 const HhData = ({count, juniorSalary, middleSalary, seniorSalary}: HhDataProps): JSX.Element => {
     return (
@@ -22,12 +23,12 @@ const HhData = ({count, juniorSalary, middleSalary, seniorSalary}: HhDataProps):
                        Начальный
                    </div>
                    <div className={styles.salaryValue}>
-                       {juniorSalary}
+                       {priceRU(juniorSalary)}
                    </div>
                    <div className={styles.rate}>
-                       {rate}
-                       {rate}
-                       {rate}
+                       <span>{rate}</span>
+                       <span>{rateNoActive}</span>
+                       <span>{rateNoActive}</span>
                    </div>
                </div>
                 <div>
@@ -35,12 +36,12 @@ const HhData = ({count, juniorSalary, middleSalary, seniorSalary}: HhDataProps):
                         Средний
                     </div>
                     <div className={styles.salaryValue}>
-                        {middleSalary}
+                        {priceRU(middleSalary)}
                     </div>
                     <div className={styles.rate}>
-                        {rate}
-                        {rate}
-                        {rate}
+                        <span>{rate}</span>
+                        <span>{rate}</span>
+                        <span>{rateNoActive}</span>
                     </div>
                 </div>
                 <div>
@@ -48,12 +49,12 @@ const HhData = ({count, juniorSalary, middleSalary, seniorSalary}: HhDataProps):
                         Профессионал
                     </div>
                     <div className={styles.salaryValue}>
-                        {seniorSalary}
+                        {priceRU(seniorSalary)}
                     </div>
                     <div className={styles.rate}>
-                        {rate}
-                        {rate}
-                        {rate}
+                        <span>{rate}</span>
+                        <span>{rate}</span>
+                        <span>{rate}</span>
                     </div>
                 </div>
             </Card>

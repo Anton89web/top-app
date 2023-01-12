@@ -1,6 +1,5 @@
 import Htag from "../components/Htag/Htag";
 import Button from "../components/Button/Button";
-import Paragraph from "../components/Paragraf/Paragraph";
 import Tag from "../components/Tag/Tag";
 import Rating from "../components/Rating/Rating";
 import {useState} from "react";
@@ -8,6 +7,7 @@ import {withLayout} from "../layout/Layout";
 import {GetStaticProps} from "next";
 import axios from "axios";
 import {MenuItem} from "../interfaces/menu.interface";
+import Input from "../components/Input/Input";
 
 
  function Home({menu, firstCategory}:HomeProps): JSX.Element {

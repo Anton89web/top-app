@@ -9,7 +9,6 @@ import {firstLevelMenu} from "../../helpers/helpers";
 import TopPageComponent from "../../page-components/TopPageComponent/TopPageComponent";
 
 function TopPage({menu, page, products, firstCategory}:TopPageProps): JSX.Element {
-    console.log(menu)
     return <TopPageComponent page={page} products={products} firstCategory={firstCategory}/>
 }
 

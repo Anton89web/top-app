@@ -9,7 +9,6 @@ const Rating= ({ isEditable= false, rating, setRating, ...props}:RatingProps): J
 
     // useEffect(()=>{
     //     constructRating(rating)
-    //     console.log(ratingArray)
     // }, [])
 
     // const constructRating = (currentRating: number) =>{

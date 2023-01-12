@@ -12,7 +12,6 @@ const Menu = (): JSX.Element => {
     const {menu, setMenu, firstCategory} = useContext(AppContext);
     const router = useRouter()
 
-    console.log(menu)
     const openSecondLevel = (secondCategory: string) => {
         if (setMenu) {
             setMenu(menu.map(m => {
