@@ -43,5 +43,6 @@
         reviews: ReviewModel[];
         reviewCount: number;
         reviewAvg?: number;
+        disadvantages: string;
     }
 

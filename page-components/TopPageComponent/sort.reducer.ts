@@ -3,12 +3,12 @@ import {ProductModel} from "../../interfaces/product.interface";
 
 export  type SortActions = { type: SortEnum.Rating} | { type: SortEnum.Price}
 
-export interface SortRuducerState {
+export interface SortReducerState {
     sort: SortEnum;
     products: ProductModel[];
 }
 
-export const sortReducer =(state: SortRuducerState, action: SortActions ): SortRuducerState => {
+export const sortReducer =(state: SortReducerState, action: SortActions ): SortReducerState => {
     switch (action.type) {
         case SortEnum.Rating:
             return {
