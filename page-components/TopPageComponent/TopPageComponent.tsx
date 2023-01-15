@@ -19,6 +19,10 @@ const TopPageComponent = ({page, products, firstCategory }:TopPageComponentProps
       dispatchSort({type: sort})
     }
 
+    useEffect(()=>{
+        dispatchSort({type: 'reset', initialState: products})
+    }, [products])
+
 
     return (
     <div className={styles.wrapper}>

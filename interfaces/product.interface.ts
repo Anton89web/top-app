@@ -16,7 +16,7 @@
         title: string
         description: string
         rating: number
-        createdAT: Date
+        createdAt: Date
     }
 
     export interface ProductModel {
