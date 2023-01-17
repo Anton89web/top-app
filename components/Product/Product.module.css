@@ -169,17 +169,6 @@
 	color: var(--primary);
 }
 
-.opened{
-	overflow: visible;
-	height: 100%;
-	transition: all .3s ease-in-out;
-	padding: 30px;
-}
-
-.closed{
-	overflow: hidden;
-	height: 0;
-}
 
 @media screen and (max-width: 1320px) {
 	.product {

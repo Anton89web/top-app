@@ -9,8 +9,11 @@ const Footer = ({ className, ...props}: FooterProps): JSX.Element => {
     return (
         <footer className={cn(className, styles.footer) } {...props}>
             <span>OwlTop © 2020 - {format( new Date(), 'yyyy')} Все права защищены</span>
-            <Link  href={"/"} target={"_blank"}>Пользовательское соглашение</Link>
-            <Link  href={"/"} target={"_blank"}>Политика конфиденциальности</Link>
+            <Link  href={"/"} target={"_blank"} aria-label='Пользовательское соглашение'>
+                Пользовательское соглашение</Link>
+            <Link  href={"/"} target={"_blank"}
+                   aria-label='Политика конфиденциальности'>
+                Политика конфиденциальности</Link>
         </footer>
     );
 };

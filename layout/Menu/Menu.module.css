@@ -24,7 +24,7 @@
 }
 
 .secondLevel{
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     cursor: pointer;
     text-transform: uppercase;
     color: var(--gray-dark);
@@ -32,11 +32,11 @@
     font-weight: 300;
     line-height: 16px;
     transition: all .2s ease-in-out;
+    display: inline-block;
 }
 
 .secondLevel:hover{
     color: var(--primary);
-    text-decoration: underline;
 }
 
 .secondBlock{
@@ -48,7 +48,7 @@
 }
 
 .secondLevelBlock{
- display: none;
+    overflow: hidden;
 }
 
 .secondLevelBlockOpen{

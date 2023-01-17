@@ -11,10 +11,12 @@ import {SortEnum} from "../../components/Sort/Sort.props";
 import {sortReducer} from "./sort.reducer";
 import TextArea from "../../components/TextArea/TextArea";
 import Product from "../../components/Product/Product";
+import {useScrollY} from "../../hooks/useScrollY";
 
 const TopPageComponent = ({page, products, firstCategory }:TopPageComponentProps): JSX.Element => {
 
     const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating });
+    const y = useScrollY()
     const setSort = (sort: SortEnum) => {
       dispatchSort({type: sort})
     }
@@ -33,7 +35,9 @@ const TopPageComponent = ({page, products, firstCategory }:TopPageComponentProps
             <Sort sort={sort} setSort={setSort}/>
         </div>
         <div>
-            {sortedProducts && sortedProducts.map(p => (<Product key={p._id} product={p}/>))}
+            {sortedProducts && sortedProducts.map(p => (<Product
+                layout
+                key={p._id} product={p}/>))}
         </div>
         <div className={styles.hhTitle}>
             <Htag tag='h2'>Вакансии - {page.category}

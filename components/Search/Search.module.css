@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.search_button{
+button.search_button{
     position: absolute;
     top: 3px;
     right: 3px;

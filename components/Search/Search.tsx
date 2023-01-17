@@ -40,6 +40,7 @@ const Search = ({className, ...props}: SearchProps): JSX.Element => {
                 className={styles.search_button}
                 appearance="primary"
                 onClick={goToSearch}
+                aria-label="Поиск"
             >
                 {searchIcon}
             </Button>
