@@ -7,22 +7,6 @@ const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...prop
     const [currentRating, setCurrentRating] = useState<Number>(rating)
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
 
-    // useEffect(()=>{
-    //     constructRating(rating)
-    // }, [])
-
-    // const constructRating = (currentRating: number) =>{
-    //     const updateArray = ratingArray.map((e:JSX.Element, i:number) => {
-    //          return(
-    //              <img src="/icons/star.svg"
-    //                   className={cn(styles.star,
-    //                       {[styles.filled]: i < currentRating})}
-    //              />
-    //          )
-    //     })
-    //     setRatingArray(updateArray)
-    // }
-
     function handleSpace(i: number, e: React.KeyboardEvent<HTMLSpanElement>) {
         if(e.code !== "Space" || !setRating){
             return
