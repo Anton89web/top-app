@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./Card.module.css";
 import {CardProps} from "./Card.props";
 
-const Card = forwardRef(({color, children, className, ...props}: CardProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+const  Card = forwardRef(({color, children, className, ...props}: CardProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     return (
         <div
             className={cn(styles.card, className, {
@@ -16,5 +16,5 @@ const Card = forwardRef(({color, children, className, ...props}: CardProps, ref:
         </div>
     );
 });
-
+Card.displayName = 'Card';
 export default Card;

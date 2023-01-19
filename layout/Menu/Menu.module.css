@@ -1,74 +1,88 @@
 .menu {
 }
 
-.firstLevel{
-    display: grid;
-    margin-bottom: 17px;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
-    align-items: center;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    transition: all .2s ease-in-out;
+.firstLevel {
+	display: grid;
+	align-items: center;
+
+	margin-bottom: 17px;
+
+	transition: all 0.2s ease-in-out;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
 .firstLevelActive,
-.firstLevel:hover{
-    color: var(--primary);
+.firstLevel:hover {
+	color: var(--primary);
 }
 
 .firstLevelActive svg,
-.firstLevel:hover svg{
-    fill: var(--primary);
+.firstLevel:hover svg {
+	fill: var(--primary);
 }
 
-.secondLevel{
-    margin-bottom: 3px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: var(--gray-dark);
-    font-size: 12px;
-    font-weight: 300;
-    transition: all .2s ease-in-out;
-    display: inline-block;
+.secondLevel {
+	display: inline-block;
+
+	margin-bottom: 3px;
+
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+
+	font-size: 12px;
+	font-weight: 300;
 }
 
-.secondLevel:hover{
-    color: var(--primary);
+.secondLevel:hover {
+	color: var(--primary);
 }
 
-.secondBlock{
-    margin-top: 15px;
-    margin-left: 12px;
-    padding-left: 32px;
+.secondBlock {
+	margin-top: 15px;
+	margin-left: 12px;
+	padding-left: 32px;
 
-    border-left: 1px solid  #DFDFDF;
+	border-left: 1px solid  #DFDFDF;
 }
 
-.secondLevelBlock{
-    overflow: hidden;
+.secondLevelBlock {
+	overflow: hidden;
 }
 
-.secondLevelBlockOpen{
-    display: block;
-}
-.secondLevelBlock:last-child{
-    margin-bottom: 20px;
+.secondLevelBlockOpen {
+	display: block;
 }
 
-.thirdLevel{
-    margin-bottom: 10px;
-    display: block;
-    cursor: pointer;
-    color: var(--gray-dark);
-    font-weight: 500;
-    font-size: 14px;
-    /*line-height: 19px;*/
-    transition: all .2s ease-in-out;
-    outline-offset: -1px;
+.secondLevelBlock:last-child {
+	margin-bottom: 20px;
 }
 
-.thirdLevel:hover, .thirdLevelActive{
-    color: var(--primary)
+.thirdLevel {
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	/* line-height: 19px; */
+	transition: all 0.2s ease-in-out;
+
+	color: var(--gray-dark);
+	outline-offset: -1px;
+
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.thirdLevel:hover,
+.thirdLevelActive {
+	color: var(--primary);
 }

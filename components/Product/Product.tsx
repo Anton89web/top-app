@@ -11,6 +11,7 @@ import Image from "next/image";
 import {Review} from "../Review/Review";
 import {ReviewForm} from "../ReviewForm/ReviewForm";
 import {motion} from "framer-motion";
+import Input from "../Input/Input";
 
 const Product = motion(forwardRef(({product, className, ...props}: ProductProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
@@ -111,5 +112,5 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
 
     );
 }))
-
+Product.displayName = 'Product';
 export default Product;

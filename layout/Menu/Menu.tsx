@@ -6,17 +6,17 @@ import {FirstLevelMenuItem, PageItem} from "../../interfaces/menu.interface";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {firstLevelMenu} from "../../helpers/helpers";
-import { motion } from 'framer-motion';
+import {motion, useReducedMotion} from 'framer-motion';
 
 
 const Menu = (): JSX.Element => {
     const {menu, setMenu, firstCategory} = useContext(AppContext);
     const router = useRouter()
-
+    const shouldReduceMotion = useReducedMotion()
     const variants = {
         visible: {
             marginBottom: 20,
-            transition: {
+            transition: shouldReduceMotion? {} : {
                 when: 'beforeChildren',
                 staggerChildren: 0.1
             }
@@ -25,10 +25,10 @@ const Menu = (): JSX.Element => {
             marginBottom: 0
         }
     }
-
+    console.log(menu)
     const variantsChildren = {
         visible: { opacity: 1, height: 29 },
-        hidden: { opacity: 0, height: 0 }
+        hidden: { opacity: shouldReduceMotion? 1 : 0, height: 0 }
     }
 
     const openSecondLevel = (secondCategory: string) => {
@@ -73,7 +73,7 @@ const Menu = (): JSX.Element => {
     return (
         <div className={styles.secondBlock}>
             {menu.map(m => {
-                if (m.pages.map(p=> p.alias).includes(router.asPath.split('/')[2])){
+                if (m.pages.map(p => p.alias).includes(router.asPath.split('/')[2])){
                     m.isOpened = true
                 }
                 return (

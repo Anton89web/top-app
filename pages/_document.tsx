@@ -13,6 +13,8 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com"/>
                     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Sans:wght@300;400;500;700&family=Open+Sans&display=swap"/>
+                    {/*<meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}/>*/}
+                    <meta property="og:local" content="ru_RU"/>
                 </Head>
                 <body>
                 <Main />

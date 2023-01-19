@@ -2,6 +2,7 @@ import React, {useState, KeyboardEvent, forwardRef, ForwardedRef} from 'react';
 import {RatingProps} from "./Rating.props";
 import styles from "./Rating.module.css"
 import cn from "classnames";
+import Product from "../Product/Product";
 
 const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...props}:RatingProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [currentRating, setCurrentRating] = useState<Number>(rating)
@@ -40,5 +41,4 @@ const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...prop
     </div>
     )
 });
-
 export default Rating;

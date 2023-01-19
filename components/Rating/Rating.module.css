@@ -16,17 +16,18 @@
 	cursor: pointer;
 }
 
-.ratingWrapper{
+.ratingWrapper {
 	position: relative;
 }
 
-.errorMessage{
+.errorMessage {
 	position: absolute;
 	bottom: -20px;
 	left: 0;
+
 	color: var(--red);
 }
 
 .error svg {
-	stroke: var(--red)
+	stroke: var(--red);
 }
