@@ -8,5 +8,7 @@ export interface SortProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivEleme
 
 export enum SortEnum {
     Rating,
+    RatingDown,
+    PriceDown,
     Price
 }

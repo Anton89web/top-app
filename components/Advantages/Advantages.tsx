@@ -1,10 +1,8 @@
 import React from 'react';
-import cn from "classnames";
 import styles from "./Advantages.module.css";
 import {AdvantagesProps} from "./Advantages.props";
-import Card from "../Card/Card";
 import {check, rate} from "../../public/Icons";
-import {priceRU} from "../../helpers/helpers";
+
 
 const Advantages = ({advantages}: AdvantagesProps): JSX.Element => {
     return (

@@ -25,7 +25,7 @@ const Menu = (): JSX.Element => {
             marginBottom: 0
         }
     }
-    console.log(menu)
+
     const variantsChildren = {
         visible: { opacity: 1, height: 29 },
         hidden: { opacity: shouldReduceMotion? 1 : 0, height: 0 }
@@ -72,7 +72,18 @@ const Menu = (): JSX.Element => {
     const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
     return (
         <div className={styles.secondBlock}>
-            {menu.map(m => {
+            {!menu.length? <li className={styles.empty}>
+					<button
+						className={styles.secondLevel }
+					>Тут пусто :(</button>
+					<motion.ul
+						layout
+						variants={variants}
+						className={styles.secondLevelBlock}
+					>
+					</motion.ul>
+				</li> : 
+                menu.map(m => {
                 if (m.pages.map(p => p.alias).includes(router.asPath.split('/')[2])){
                     m.isOpened = true
                 }

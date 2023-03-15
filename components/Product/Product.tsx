@@ -11,14 +11,13 @@ import Image from "next/image";
 import {Review} from "../Review/Review";
 import {ReviewForm} from "../ReviewForm/ReviewForm";
 import {motion} from "framer-motion";
-import Input from "../Input/Input";
 
 const Product = motion(forwardRef(({product, className, ...props}: ProductProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
     const  reviewRef = useRef<HTMLDivElement>(null)
     const  variants = {
-        visible: { opacity: 1, height: 'auto'},
-        hidden: {opacity: 0, height: 0}
+        visible: { opacity: 1, height: 'auto', display: 'block' },
+		hidden: { opacity: 0, height: 0, display: 'none' }
     }
     const srollToReview = () => {
         setIsReviewOpened(true)
@@ -26,7 +25,7 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
             behavior: 'smooth',
             block: 'start'
         })
-            reviewRef.current?.focus()
+        reviewRef.current?.focus()
     }
 
     return (
@@ -48,7 +47,7 @@ const Product = motion(forwardRef(({product, className, ...props}: ProductProps,
                 <div className={styles.credit}>
                     {priceRU(product.credit)}/<span className={styles.month}>мес</span>
                 </div>
-                <div className={styles.rating}><Rating rating={product.reviewAvg ?? product.initialRating}/></div>
+                <div className={styles.rating}><Rating rating={product.reviewAvg || product.initialRating}/></div>
                 <div className={styles.tags}>{product.categories.map(c => <Tag className={styles.category} key={c} color="ghost">{c}</Tag>)}</div>
                 <div className={styles.priceTitle}>цена</div>
                 <div className={styles.creditTitle}>кредит</div>

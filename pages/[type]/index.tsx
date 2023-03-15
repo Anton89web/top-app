@@ -11,10 +11,15 @@ import {API} from "../../helpers/api";
 function Type({firstCategory}: TypeProps): JSX.Element {
 
     return (
-        <>
-            <h1>Type: {firstCategory}</h1>
-        </>
-    )
+			<div style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: "100%"
+			}}>
+				<h1  children={"Выберите категорию ;)"}/>
+			</div>
+		)
 }
 
 export default withLayout(Type)

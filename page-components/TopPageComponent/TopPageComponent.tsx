@@ -16,13 +16,17 @@ import {useReducedMotion} from "framer-motion";
 
 const TopPageComponent = ({page, products, firstCategory }:TopPageComponentProps): JSX.Element => {
 const shouldReduceMotion = useReducedMotion()
-    const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating });
+const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating});
+
+
     const setSort = (sort: SortEnum) => {
+        console.log(sort);
       dispatchSort({type: sort})
     }
 
+
     useEffect(()=>{
-        dispatchSort({type: 'reset', initialState: products})
+        dispatchSort({type: SortEnum.Rating})
     }, [products])
 
 
@@ -50,7 +54,6 @@ const shouldReduceMotion = useReducedMotion()
           <Advantages advantages={page.advantages}/>
         </>}
         {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html: page.seoText}}/> }
-        <TextArea placeholder={"Текст отзыва"}/>
         <Htag tag="h2">Получаемые навыки</Htag>
         {page.tags.map(t => <Tag key={t} color={'primary'} size={'s'}>{t}</Tag>)}
     </div>

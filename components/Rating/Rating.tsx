@@ -5,9 +5,10 @@ import cn from "classnames";
 import Product from "../Product/Product";
 
 const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...props}:RatingProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
-    const [currentRating, setCurrentRating] = useState<Number>(rating)
+    const [currentRating, setCurrentRating] = useState(rating)
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
 
+    
     function handleSpace(i: number, e: React.KeyboardEvent<HTMLSpanElement>) {
         if(e.code !== "Space" || !setRating){
             return
@@ -29,7 +30,7 @@ const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...prop
                     onKeyDown={(e:KeyboardEvent<HTMLSpanElement>)=> isEditable && handleSpace(i + 1, e)}
                     key={i}
                     className={cn(styles.star, {
-                        [styles.filled]: i < currentRating ,
+                        [styles.filled]: i < Math.round(currentRating),
                         [styles.editable]: isEditable == true
                     })}
                 ><svg
@@ -41,4 +42,5 @@ const Rating= forwardRef(({ isEditable= false, error, rating, setRating, ...prop
     </div>
     )
 });
+Rating.displayName = "Rating"
 export default Rating;

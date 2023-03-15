@@ -1,6 +1,6 @@
 .sort span {
 	cursor: pointer;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
 
 .sort span:hover {
@@ -30,4 +30,13 @@
 	color: var(--primary);
 
 	font-weight: bold;
+}
+
+.icon {
+	transform: rotateX(0deg);
+	display: inline-block;
+}
+
+.activeIcon {
+	transform: rotateX(180deg);
 }

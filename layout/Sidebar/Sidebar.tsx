@@ -12,7 +12,7 @@ const Sidebar = ({className , ...props}: SidebarProps): JSX.Element => {
         <div className={(cn(className, styles.sidebar))}  {...props}>
             {logo}
             <div>
-                <Search/>
+                {/* <Search/> */}
             </div>
            <Menu/>
         </div>
