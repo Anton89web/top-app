@@ -1,8 +1,8 @@
 version: "3"
 services:
   app:
-    image: top-app_next
-    container_name: top-app_next
+    image: top-app
+    container_name: top-app
     restart: always
     ports:
     - 3000:3000

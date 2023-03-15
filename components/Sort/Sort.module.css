@@ -33,8 +33,9 @@
 }
 
 .icon {
-	transform: rotateX(0deg);
 	display: inline-block;
+
+	transform: rotateX(0deg);
 }
 
 .activeIcon {

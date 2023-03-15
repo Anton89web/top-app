@@ -25,9 +25,10 @@ const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer,
     }
 
 
-    useEffect(()=>{
-        dispatchSort({type: SortEnum.Rating})
-    }, [products])
+    useEffect(() => {
+		dispatchSort({ type: 'reset', initialState: products });
+        setSort(SortEnum.Rating)
+	}, [products]);
 
 
     return (
